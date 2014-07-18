@@ -65,7 +65,8 @@ Description: Axel's metapackage to prevent the installation of PulseAudio
 Package: prevent-mono
 Architecture: all
 Depends: ${misc:Depends}
-Conflicts: libmono-2.0-1,
+Conflicts: cli-common,
+           libmono-2.0-1,
            libmono-3.0-1,
            libmono-4.0-1,
            libmono-5.0-1,
