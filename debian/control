@@ -66,16 +66,9 @@ Package: prevent-mono
 Architecture: all
 Depends: ${misc:Depends}
 Conflicts: cli-common,
-           libmono-2.0-1,
-           libmono-3.0-1,
-           libmono-4.0-1,
-           libmono-5.0-1,
-           mono-2.0-gac,
-           mono-3.0-gac,
-           mono-4.0-gac,
-           mono-5.0-gac,
            mono-gac,
-           mono-mcs
+           mono-mcs,
+           mono-runtime
 Multi-Arch: foreign
 Description: Axel's metapackage to prevent the installation of Mono/C#
  This metapackage ensures that Mono (C#) is not installed on your
