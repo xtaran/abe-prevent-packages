@@ -1,0 +1,91 @@
+Source: abe-prevent-packages
+Maintainer: Axel Beckert <abe@deuxchevaux.org>
+Section: metapackages
+Priority: extra
+#Homepage: https://github.com/xtaran/abe-metapackages#readme
+#Vcs-Git: git://github.com/xtaran/abe-metapackages.git
+#Vcs-Browser: https://github.com/xtaran/abe-metapackages
+Standards-Version: 3.9.5
+Build-Depends: debhelper (>= 7)
+
+Package: prevent-packagekit
+Architecture: all
+Depends: ${misc:Depends}
+Conflicts: gnome-packagekit,
+           gnome-packagekit-session,
+           packagekit,
+           packagekit-backend-aptcc,
+           packagekit-backend-smart,
+           sessioninstaller
+Multi-Arch: foreign
+Description: Axel's metapackage to prevent the installation of PackageKit
+ This metapackage ensures that PackageKit is not installed on your
+ computer.
+
+Package: prevent-consolekit
+Architecture: all
+Depends: ${misc:Depends}
+Conflicts: consolekit,
+           libpam-ck-connector
+Multi-Arch: foreign
+Description: Axel's metapackage to prevent the installation of ConsoleKit
+ This metapackage ensures that ConsoleKit is not installed on your
+ computer.
+
+Package: prevent-policykit
+Architecture: all
+Depends: ${misc:Depends}
+Conflicts: cups-pk-helper,
+           policykit-1
+Multi-Arch: foreign
+Description: Axel's metapackage to prevent the installation of PolicyKit
+ This metapackage ensures that PolicyKit is not installed on your computer.
+
+Package: prevent-ppckit
+Architecture: all
+Depends: prevent-consolekit,
+         prevent-packagekit,
+         prevent-policykit,
+         ${misc:Depends}
+Multi-Arch: foreign
+Description: Axel's metapackage to prevent the installation of GNOME related *Kit packages
+ This metapackage ensures that neither ConsoleKit, PackageKit nor
+ PolicyKit are installed on your computer.
+
+Package: prevent-pulseaudio
+Architecture: all
+Depends: ${misc:Depends}
+Conflicts: libasound2-plugins,
+           pulseaudio
+Multi-Arch: foreign
+Description: Axel's metapackage to prevent the installation of PulseAudio
+ This metapackage ensures that PulseAudio is not installed on your
+ computer.
+
+Package: prevent-mono
+Architecture: all
+Depends: ${misc:Depends}
+Conflicts: libmono-2.0-1,
+           libmono-3.0-1,
+           libmono-4.0-1,
+           libmono-5.0-1,
+           mono-2.0-gac,
+           mono-3.0-gac,
+           mono-4.0-gac,
+           mono-5.0-gac,
+           mono-gac,
+           mono-mcs
+Multi-Arch: foreign
+Description: Axel's metapackage to prevent the installation of Mono/C#
+ This metapackage ensures that Mono (C#) is not installed on your
+ computer.
+
+Package: prevent-networkmanager
+Architecture: all
+Depends: ${misc:Depends}
+Conflicts: network-manager,
+           network-manager-gnome
+Multi-Arch: foreign
+Description: Axel's metapackage to prevent the installation of NetworkManager
+ This metapackage ensures that NetworkManager is not installed on your
+ computer.
