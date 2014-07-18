@@ -83,3 +83,11 @@ Multi-Arch: foreign
 Description: Axel's metapackage to prevent the installation of NetworkManager
  This metapackage ensures that NetworkManager is not installed on your
  computer.
+
+Package: prevent-dbus
+Architecture: all
+Depends: ${misc:Depends}
+Conflicts: dbus
+Multi-Arch: foreign
+Description: Axel's metapackage to prevent the installation of DBus
+ This metapackage ensures that DBus is not installed on your computer.
